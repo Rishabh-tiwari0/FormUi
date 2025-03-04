@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +22,8 @@ body {
   height: 90%;
   padding: 30px;
   border-radius: 10px;
+  display: flex;
+  gap: 30px;
 }
 .form-cont {
   width: 50%;
@@ -34,11 +38,67 @@ body {
 }
 input {
   padding: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   font-size: 14px;
 }
 input::placeholder {
   font-size: 14px;
   color: #9fa5ab;
+}
+.btn {
+  padding: 5px 10px;
+  width: fit-content;
+  background: #100e0e;
+  border: none;
+  color: aliceblue;
+  border-radius: 5px;
+}
+.btn:hover {
+  border: 2px solid black;
+  color: #100e0e;
+  background: white;
+}
+.progress-cont {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+}
+.progress {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin: 20px;
+  display: grid;
+
+  place-content: center;
+}
+.progress > h1 {
+  font-family: "Lobster", cursive;
+}
+.progress::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 2px solid black;
+  position: absolute;
+  clip: rect(0, 50px, 100px, 0);
+}
+.progress-cont > p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.steps {
+  background: #acacac;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.steps > p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
